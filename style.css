@@ -1,0 +1,123 @@
+h1{
+    color: #1e1c1c;
+    font-size: 3.5em;
+    text-align: center;
+    margin-top: 1%;
+}
+.subtitle{
+    color: #1e1c1c;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 1%;
+}
+body{
+    background-color: rgb(213, 213, 96);
+}
+.food-container1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    color: #e97f28;
+    font-size: 1.5em;
+    padding: 5%;
+
+}
+.food-container2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    color: #e97f28;
+    font-size: 1.5em;
+    padding: 5%;
+}
+.about{
+    color: #1e1c1c;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 2em;
+}
+/* Container ko center karne ke liye */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; /* Text se thoda gap rakhne ke liye */
+    margin-bottom: 50px;
+}
+
+/* Input box ki styling */
+.search-input {
+    width: 450px;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px; /* Left side se rounder corners */
+    outline: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Button ki styling */
+.search-btn {
+    padding: 15px 25px;
+    font-size: 16px;
+    background-color: #1e1c1c; /* Tumhari heading waala dark color */
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0; /* Right side se rounder corners */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Hover karne par button ka effect */
+.search-btn:hover {
+    background-color: #444;
+}
+/* Section Title styling */
+.section-title {
+    font-family: sans-serif;
+    color: #1e1c1c;
+    margin-left: 10%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Cards Container - Isse teeno cards ek hi horizontal row mein lock ho jayenge */
+.cards-container {
+    display: flex !important;
+    flex-direction: row !important; /* Forcefully side-by-side */
+    flex-wrap: wrap;               /* Agar screen chhoti ho to cards neeche shift ho jayein */
+    justify-content: center;       /* Saare cards ko center mein lane ke liye */
+    align-items: flex-start;       /* Sabhi cards upar se ek barabar line mein shuru honge */
+    gap: 25px;                     /* Cards ke beech ka gap */
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Individual Restaurant Card - Perfect width configuration */
+.res-card {
+    width: 300px !important;       /* Card ki width locked */
+    min-width: 280px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.res-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Card Image - Yeh image ko stretch ya bada hone se rokegi */
+.res-img {
+    width: 100% !important;
+    height: 180px !important;      /* Fixed height for all images */
+    object-fit: cover !important;  /* Image perfectly fill karegi space bina kharab hue */
+    display: block;
+}
