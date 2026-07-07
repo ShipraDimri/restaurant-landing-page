@@ -82,42 +82,62 @@ body{
     margin-top: 40px;
     margin-bottom: 20px;
 }
-
-/* Cards Container - Isse teeno cards ek hi horizontal row mein lock ho jayenge */
+/* 1. Main Parent Grid Container */
 .cards-container {
-    display: flex !important;
-    flex-direction: row !important; /* Forcefully side-by-side */
-    flex-wrap: wrap;               /* Agar screen chhoti ho to cards neeche shift ho jayein */
-    justify-content: center;       /* Saare cards ko center mein lane ke liye */
-    align-items: flex-start;       /* Sabhi cards upar se ek barabar line mein shuru honge */
-    gap: 25px;                     /* Cards ke beech ka gap */
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
+    display: grid !important;
+    grid-template-columns: repeat(3, 300px) !important; /* Strict 3 columns side-by-side */
+    justify-content: center !important; /* Horizontally ekdum center align */
+    gap: 30px !important; /* Cards ke beech ka equal gap */
+    max-width: 1050px !important;
+    margin: 40px auto !important; /* Screen par center rakhne ke liye */
+    padding: 0 20px !important;
+    justify-items: center !important;
 }
 
-/* Individual Restaurant Card - Perfect width configuration */
+/* 2. Anchor Tags inside container */
+.cards-container a {
+    display: block !important;
+    text-decoration: none !important;
+    color: inherit !important;
+    width: 100% !important;
+}
+
+/* 3. Individual Restaurant Card Styling */
 .res-card {
-    width: 300px !important;       /* Card ki width locked */
-    min-width: 280px;
-    background-color: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
+    width: 100% !important;
+    background-color: white !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    cursor: pointer !important;
 }
 
-/* Hover effect */
+/* Hover Effect */
 .res-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important;
 }
 
-/* Card Image - Yeh image ko stretch ya bada hone se rokegi */
+/* 4. Card Image Size Fix */
 .res-img {
     width: 100% !important;
-    height: 180px !important;      /* Fixed height for all images */
-    object-fit: cover !important;  /* Image perfectly fill karegi space bina kharab hue */
-    display: block;
+    height: 180px !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+/* Menu Page ke Order Now buttons */
+.menu-order-btn {
+    background-color: #24963f; /* Zomato Green Color */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.menu-order-btn:hover {
+    background-color: #1c7531;
 }
